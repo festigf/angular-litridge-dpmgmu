@@ -8,7 +8,7 @@ import { Department} from '../domain/department';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = 'Angular ';
 
   constructor(private dataService:DataService){}
   onLoad(){
