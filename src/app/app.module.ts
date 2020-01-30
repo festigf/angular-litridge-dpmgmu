@@ -1,18 +1,33 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { DataService } from './services/data.service';
+import { LoginComponent } from './admin/login/login.component';
 import { HomeComponent } from './home/home.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,HttpClientModule ,ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, PagenotfoundComponent, PageNotFoundComponent ],
-  bootstrap:    [ AppComponent ],
-  providers: [DataService]
+  declarations: [
+    AppComponent,
+    MainNavComponent,
+    LoginComponent,
+    HomeComponent,
+    PageNotFoundComponent
+  ],
+  imports: [
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+  ],
+  providers: [DataService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
