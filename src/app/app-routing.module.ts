@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',    redirectTo: 'home',    pathMatch: 'full'  },
   { path: 'home', component: HomeComponent},
   /*{ path: 'login', component: LoginComponent},*/
-  { path: 'departments' , loadChildren: './departments/departments.module#departmentsModule' },
+  { path: 'departments' , loadChildren: './departments/departments.module#DepartmentsModule' },
   /*{ path: 'noleggi' , loadChildren: './noleggi/noleggi.module#NoleggiModule', canActivateChild: [AdminChildGuard] },*/
   { path: '**' , component: PageNotFoundComponent },
 
